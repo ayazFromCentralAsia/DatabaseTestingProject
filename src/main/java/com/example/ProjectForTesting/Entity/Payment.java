@@ -2,11 +2,11 @@ package com.example.ProjectForTesting.Entity;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
-import org.springframework.cglib.core.Local;
 
 
 import java.time.LocalDate;
 
+@Entity(name = "payment")
 public class Payment {
 
     @Id

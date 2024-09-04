@@ -3,6 +3,7 @@ package com.example.ProjectForTesting.Entity;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 
 
 import java.time.LocalDate;
@@ -21,7 +22,7 @@ public class Shipping {
     private String adress;
 
     @NotNull
-    @Min(3)
+    @Size(max = 200,min = 3)
     private String city;
 
     @NotNull

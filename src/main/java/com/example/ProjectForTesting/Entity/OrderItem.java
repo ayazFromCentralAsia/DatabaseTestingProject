@@ -3,10 +3,8 @@ package com.example.ProjectForTesting.Entity;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 
-import java.util.ArrayList;
-
 @Entity(name = "order_items")
-public class Order_Item {
+public class OrderItem {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

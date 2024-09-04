@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 
 
 import java.time.LocalDate;
@@ -15,7 +16,7 @@ public class User {
     private int id;
 
     @NotNull
-    @Min(2)
+    @Size(max = 200,min = 3)
     private String username;
 
     @NotNull
@@ -23,7 +24,7 @@ public class User {
     private String email;
 
     @NotNull
-    @Min(6)
+    @Size(max = 200,min = 3)
     private String password;
 
     private String role;
@@ -76,5 +77,29 @@ public class User {
 
     public void setCreated_at(LocalDate created_at) {
         this.created_at = created_at;
+    }
+
+    public User() {
+    }
+
+    public User(int id, String username, String email, String password, String role, LocalDate created_at) {
+        this.id = id;
+        this.username = username;
+        this.email = email;
+        this.password = password;
+        this.role = role;
+        this.created_at = created_at;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", role='" + role + '\'' +
+                ", created_at=" + created_at +
+                '}';
     }
 }
