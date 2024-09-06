@@ -34,7 +34,6 @@ public class UserController {
 
     @PostMapping("/create")
     public ResponseEntity<?> createUser(@RequestBody UserDto userDto ){
-        System.out.println(userMapper.userMapper(userDto).toString());
         User user = userMapper.userMapper(userDto);
         userService.createUser(user);
         return ResponseEntity.ok().body("Good Request");

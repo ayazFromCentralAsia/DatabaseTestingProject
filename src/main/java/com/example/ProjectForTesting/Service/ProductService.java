@@ -42,7 +42,7 @@ public class ProductService {
                     product.setCategory(updatedProduct.getCategory());
                     return productRepository.save(product);
                 })
-                .orElseThrow(() -> new RuntimeException("Product not found"));
+                .orElseThrow(() -> new RuntimeException("ProductDto not found"));
     }
 
 
