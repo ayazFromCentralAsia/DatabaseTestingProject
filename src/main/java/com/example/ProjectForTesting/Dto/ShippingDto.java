@@ -6,7 +6,7 @@ import jakarta.validation.constraints.Size;
 
 public class ShippingDto {
 
-    private Orders orders;
+    private OrdersDto ordersDto;
 
     private String adress;
 
@@ -22,12 +22,12 @@ public class ShippingDto {
     private String status;
 
 
-    public Orders getOrders() {
-        return orders;
+    public OrdersDto getOrdersDto() {
+        return ordersDto;
     }
 
-    public void setOrders(Orders orders) {
-        this.orders = orders;
+    public void setOrdersDto(OrdersDto ordersDto) {
+        this.ordersDto = ordersDto;
     }
 
     public String getAdress() {

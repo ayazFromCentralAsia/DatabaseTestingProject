@@ -4,18 +4,18 @@ import com.example.ProjectForTesting.Entity.User;
 
 public class OrdersDto {
 
-    private User user;
+    private UserDto userDto;
 
     private int total_price;
 
     private String status;
 
-    public User getUser() {
-        return user;
+    public UserDto getUserDto() {
+        return userDto;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setUserDto(UserDto userDto) {
+        this.userDto = userDto;
     }
 
     public int getTotal_price() {
